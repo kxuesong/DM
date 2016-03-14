@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface FunctionListViewController : UIViewController
+@interface FunctionListViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSString *channelId;
+@property (nonatomic, strong) NSString *rootId;
 
 @end

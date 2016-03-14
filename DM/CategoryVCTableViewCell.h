@@ -10,4 +10,7 @@
 
 @interface CategoryVCTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *smallTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @end

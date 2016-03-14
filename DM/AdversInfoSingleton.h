@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdversModel.h"
 
 @interface AdversInfoSingleton : NSObject
 
+
+@property (nonatomic, strong) AdversModel *adversModel;
+
++(instancetype)shareManager;
+
++(void)initWithAdversModel:(AdversModel *)adversModel;
 @end

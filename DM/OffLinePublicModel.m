@@ -6,9 +6,9 @@
 //  Copyright © 2016年 tepusoft. All rights reserved.
 //
 
-#import "PartTimeInfoModel.h"
+#import "OffLinePublicModel.h"
 #import "NSDictionary+StringValue.h"
-@implementation PartTimeInfoModel
+@implementation OffLinePublicModel
 
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary

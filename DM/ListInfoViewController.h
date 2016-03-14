@@ -7,7 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
+@class ScheduleModel;
 
-@interface ListInfoViewController : UIViewController
+typedef enum : NSUInteger {
+    ScheduleType,
+    ColumnsType
+} EnterType;
+
+@protocol ListInfoViewControllerDelegate <NSObject>
+
+-(void)listInfoTableViewDidSelected:(id)scheduleModel;
+
+@end
+
+@interface ListInfoViewController : CoustomNavigationBackViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, assign) EnterType enterType;
+
+@property (nonatomic, weak) id<ListInfoViewControllerDelegate> delegate;
 
 @end

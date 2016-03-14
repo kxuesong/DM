@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
+@class AdversModel;
 
-@interface AdvertisersListViewController : UIViewController
+@protocol AdvertisersListViewControllerDelegate <NSObject>
+
+-(void)didSelectAdvertisers:(AdversModel *)adversModel;
+
+@end
+
+@interface AdvertisersListViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *provinceButton;
+@property (weak, nonatomic) IBOutlet UIButton *cityButton;
+@property (weak, nonatomic) IBOutlet UIButton *districtButton;
+
+@property (nonatomic, assign) id<AdvertisersListViewControllerDelegate> delegate;
 
 @end

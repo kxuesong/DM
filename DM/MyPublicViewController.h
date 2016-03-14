@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface MyPublicViewController : UIViewController
+@interface MyPublicViewController : CoustomNavigationBackViewController
 
 @end

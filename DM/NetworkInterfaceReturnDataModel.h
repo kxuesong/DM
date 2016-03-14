@@ -10,4 +10,11 @@
 
 @interface NetworkInterfaceReturnDataModel : NSObject
 
+
+@property (nonatomic, assign) NSInteger status;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) id data;
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictrionary;
+
 @end

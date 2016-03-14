@@ -102,18 +102,12 @@
         label.alpha = 1;
     }];
 }
-//y
--(void)showNoPower
+
+
+
+-(UIViewController *)storyboardWithstoryboardID:(NSString *)storyboardID
 {
-//    CGSize size = self.view.frame.size;
-    
-    //view
-    UIView *backgroundView = [[UIView alloc]initWithFrame:self.view.frame];
-    backgroundView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:backgroundView];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.view.frame];
-    imageView.image = [UIImage imageNamed:@"无权加载"];
-    [backgroundView addSubview:imageView];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    return [sb instantiateViewControllerWithIdentifier:storyboardID];
 }
 @end

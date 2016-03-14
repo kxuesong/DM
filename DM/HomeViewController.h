@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+typedef enum : NSUInteger {
+    collectionViewTypeFunction = 1,
+    collectionViewTypeImplement = 2
+} collectionViewType;
 
+@interface HomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *functionCollectionView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *ImageScrollView;
+@property (weak, nonatomic) IBOutlet UICollectionView *implementCollectionView;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *adverButton;
 @end

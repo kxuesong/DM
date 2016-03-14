@@ -7,8 +7,13 @@
 //
 
 #import "AboutWeViewController.h"
+#import "AboutWeVCTableViewCell.h"
 
-@interface AboutWeViewController ()
+
+@interface AboutWeViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong)NSArray *tableNameArray;
+@property (nonatomic, strong)NSArray *tableDetailArray;
 
 @end
 
@@ -16,12 +21,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableNameArray = @[@"开发商",@"联系方式"];
+    self.tableDetailArray = @[@"特普软件",@""];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDelegate and UITableViewDataSource
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tableNameArray.count;
+}
+
+
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AboutWeVCTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AboutWeVCTableViewCell"];
+    if (cell == nil) {
+        cell = [[NSBundle mainBundle] loadNibNamed:@"AboutWeVCTableViewCell" owner:nil options:nil][0];
+    }
+    cell.nameLabel.text = self.tableNameArray[indexPath.row];
+    cell.detailLabel.text = self.tableDetailArray[indexPath.row];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
 }
 
 /*

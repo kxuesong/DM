@@ -10,4 +10,7 @@
 
 @interface PublicViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *changeButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *advertisersLabel;
 @end

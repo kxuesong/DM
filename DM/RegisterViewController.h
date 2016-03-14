@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPwdTextField;
 @property (weak, nonatomic) IBOutlet UIButton *finishButton;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *inviteTextField;
+@property (weak, nonatomic) IBOutlet UIButton *adversButton;
 
 @end

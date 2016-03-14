@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AboutWeViewController : UIViewController
+#import "CoustomNavigationBackViewController.h"
+@interface AboutWeViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

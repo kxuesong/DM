@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface BelowLinePublicViewController : UIViewController
+@interface BelowLinePublicViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UIButton *acquireInfoButton;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

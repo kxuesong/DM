@@ -10,4 +10,10 @@
 
 @interface AreaModel : NSObject
 
+@property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSString *parentCode;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *usetag;
+
 @end

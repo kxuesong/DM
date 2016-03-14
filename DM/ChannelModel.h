@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DMLocalObject : NSObject
+@interface ChannelModel : NSObject
 
 @property (nonatomic, assign) NSInteger Id;
 @property (nonatomic, assign) NSInteger pid;

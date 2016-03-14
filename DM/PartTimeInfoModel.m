@@ -6,8 +6,8 @@
 //  Copyright © 2015年 tepusoft. All rights reserved.
 //
 
-#import "OnLinePublicModel.h"
+#import "PartTimeInfoModel.h"
 
-@implementation OnLinePublicModel
+@implementation PartTimeInfoModel
 
 @end

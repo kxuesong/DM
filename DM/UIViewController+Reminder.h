@@ -18,5 +18,14 @@
 
 - (void)starNetWorkingWithString:(NSString *)string;
 
--(void)showNoPower;
+
+
+/**
+ *  通过storyboard ID  从Main.storyboard中获取ViewController
+ *
+ *  @param storyboardID storyboard 中的 ID标识
+ *
+ *  @return 返回获取的ViewController
+ */
+-(UIViewController *)storyboardWithstoryboardID:(NSString *)storyboardID;
 @end

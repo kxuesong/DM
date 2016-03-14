@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface AreaSelectViewController : UIViewController
+@protocol  AreaSelectViewControllerDelegate<NSObject>
+
+-(void)AreaSelectViewControllerFinishSelectWithArea:(NSString *)area;
+
+@end
+
+@interface AreaSelectViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) id<AreaSelectViewControllerDelegate> delegate;
 
 @end

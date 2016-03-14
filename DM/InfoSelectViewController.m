@@ -7,31 +7,65 @@
 //
 
 #import "InfoSelectViewController.h"
+#import "ChannelModel.h"
+#import "SqliteOperateQueue.h"
+#import "DMLocalSqliteData.h"
 
-@interface InfoSelectViewController ()
+@interface InfoSelectViewController ()<UITableViewDataSource,UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *tableArray;
 @end
 
 @implementation InfoSelectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc]init];
+    
+    _tableArray = [NSArray array];
+    
+    [self initTableArray];
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -  CoustomFunction
+-(void)initTableArray
+{
+    if (_isWorkPosition) {
+        _tableArray = [DMLocalSqliteData workPositionListDataWithParentID:_findType];
+    }else{
+        _tableArray = [DMLocalSqliteData selectListDataWithType:_findType];
+    }
+    [_tableView reloadData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDelegate AND UITableViewDataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _tableArray.count;
 }
-*/
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InfoSelectTableCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"InfoSelectTableCell"];;
+    }
+    cell.textLabel.text = _tableArray[indexPath.row];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *title = [_tableArray objectAtIndex:indexPath.row];
+    [self.delegate infoSelectViewControllerDidSelectWithTitle:title];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 @end

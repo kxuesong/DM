@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OnLinePublicModel : NSObject
+@interface PartTimeInfoModel : NSObject
 
 @property (nonatomic, strong) NSString *Id; //信息ID
 @property (nonatomic, strong) NSString *userId; //客户ID

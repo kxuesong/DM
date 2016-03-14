@@ -8,7 +8,7 @@
 
 #import "H5ViewController.h"
 
-@interface H5ViewController ()
+@interface H5ViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -16,13 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webView.delegate = self;
+    NSString *urlString ;
+    if (_enterType == EnterTypeFraction) {
+        urlString = [NSString stringWithFormat:@"http://210.44.64.48%@",@"/dm/f/mobile/shop/shop_index.html"];
+    }else{
+        urlString = [NSString stringWithFormat:@"http://210.44.64.48%@",_urlString];
+    }
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
+    [self.webView  loadRequest:request];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - UIWebViewDelegate 
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
 }
+
+
 
 /*
 #pragma mark - Navigation

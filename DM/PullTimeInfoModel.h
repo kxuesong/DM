@@ -10,4 +10,11 @@
 
 @interface PullTimeInfoModel : PartTimeInfoModel
 
+@property (nonatomic, strong) NSString *year;
+@property (nonatomic, strong) NSString *salary;
+@property (nonatomic, strong) NSString *edu;
+@property (nonatomic, strong) NSString *num;
+@property (nonatomic, strong) NSString *age;
+@property (nonatomic, strong) NSString *place;
+
 @end

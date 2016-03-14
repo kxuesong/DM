@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ChannelModel;
 
+@protocol InfoSelectViewControllerDelegate <NSObject>
+
+-(void)infoSelectViewControllerDidSelectWithTitle:(NSString *)title;
+
+@end
 @interface InfoSelectViewController : UIViewController
+
+
+@property (nonatomic, copy) NSString *findType;
+
+@property (nonatomic, assign) BOOL isWorkPosition;
+
+@property (nonatomic, weak) id<InfoSelectViewControllerDelegate> delegate;
 
 @end

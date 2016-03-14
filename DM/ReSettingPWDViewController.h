@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ReSettingPWDViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *oldPWDTextField;
+@property (weak, nonatomic) IBOutlet UITextField *PWDTextField;
+@property (weak, nonatomic) IBOutlet UITextField *affirmTextField;
+@property (weak, nonatomic) IBOutlet UIButton *finishButton;
 
 @end

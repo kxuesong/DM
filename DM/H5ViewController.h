@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface H5ViewController : UIViewController
 
+typedef enum : NSUInteger {
+    EnterTypeFraction//积分
+} EnterType;
+@interface H5ViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+@property (nonatomic, strong) NSString *urlString;
+
+
+@property (nonatomic, assign) EnterType enterType;
 @end

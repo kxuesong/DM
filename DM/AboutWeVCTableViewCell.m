@@ -6,9 +6,9 @@
 //  Copyright © 2015年 tepusoft. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "AboutWeVCTableViewCell.h"
 
-@implementation TableViewCell
+@implementation AboutWeVCTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

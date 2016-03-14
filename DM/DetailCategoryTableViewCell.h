@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailCategoryTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

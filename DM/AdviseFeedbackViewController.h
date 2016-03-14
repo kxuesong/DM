@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface AdviseFeedbackViewController : UIViewController
+@interface AdviseFeedbackViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UIButton *publicButton;
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end

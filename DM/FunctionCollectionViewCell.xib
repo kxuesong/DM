@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FunctionCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="68" height="71"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="68" height="71"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_implement_bus_tickets" translatesAutoresizingMaskIntoConstraints="NO" id="UvC-M1-tdc">
+                        <rect key="frame" x="9" y="0.0" width="50" height="50"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="iNQ-bU-bR5"/>
+                            <constraint firstAttribute="width" constant="50" id="yG0-Si-BVu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房产" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-Sb-nxw">
+                        <rect key="frame" x="0.0" y="50" width="68" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CW6-Sb-nxw" secondAttribute="bottom" id="2It-FC-pR7"/>
+                <constraint firstItem="CW6-Sb-nxw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5sl-zZ-8Xp"/>
+                <constraint firstItem="UvC-M1-tdc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ia0-lU-v6H"/>
+                <constraint firstItem="CW6-Sb-nxw" firstAttribute="top" secondItem="UvC-M1-tdc" secondAttribute="bottom" id="kOw-jb-j0x"/>
+                <constraint firstAttribute="trailing" secondItem="CW6-Sb-nxw" secondAttribute="trailing" id="ngl-mP-WsA"/>
+                <constraint firstItem="UvC-M1-tdc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zyU-On-GHa"/>
+            </constraints>
+            <size key="customSize" width="68" height="71"/>
+            <connections>
+                <outlet property="imageView" destination="UvC-M1-tdc" id="7i9-Wk-mHQ"/>
+                <outlet property="titleLabel" destination="CW6-Sb-nxw" id="tf8-TO-9fX"/>
+            </connections>
+            <point key="canvasLocation" x="327" y="400.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="home_implement_bus_tickets" width="64" height="64"/>
+    </resources>
 </document>

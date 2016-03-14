@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ServerPhoneViewController : UIViewController
+#import "CoustomNavigationBackViewController.h"
+@interface ServerPhoneViewController : CoustomNavigationBackViewController
 
 @end

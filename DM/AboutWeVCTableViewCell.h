@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewCell : UITableViewCell
+@interface AboutWeVCTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @end

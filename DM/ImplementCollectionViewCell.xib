@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImplementCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="76" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="76" height="70"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vE9-q3-rc7">
+                        <rect key="frame" x="18" y="0.0" width="40" height="40"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="2SC-li-xz7"/>
+                            <constraint firstAttribute="width" constant="40" id="KVW-N1-Jbn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHW-OY-fe4">
+                        <rect key="frame" x="0.0" y="40" width="76" height="30"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="vE9-q3-rc7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ATc-XA-oT9"/>
+                <constraint firstAttribute="trailing" secondItem="VHW-OY-fe4" secondAttribute="trailing" id="Spk-ia-ZOs"/>
+                <constraint firstItem="VHW-OY-fe4" firstAttribute="top" secondItem="vE9-q3-rc7" secondAttribute="bottom" id="VWG-du-wRl"/>
+                <constraint firstItem="vE9-q3-rc7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fat-Jb-tgA"/>
+                <constraint firstItem="VHW-OY-fe4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gBt-3y-M3C"/>
+                <constraint firstAttribute="bottom" secondItem="VHW-OY-fe4" secondAttribute="bottom" id="uVc-Ho-Y9P"/>
+            </constraints>
+            <size key="customSize" width="76" height="70"/>
+            <connections>
+                <outlet property="imageView" destination="vE9-q3-rc7" id="5xq-TI-Guh"/>
+                <outlet property="titleLabel" destination="VHW-OY-fe4" id="2IU-T2-iLA"/>
+            </connections>
+            <point key="canvasLocation" x="331" y="350"/>
         </collectionViewCell>
     </objects>
 </document>

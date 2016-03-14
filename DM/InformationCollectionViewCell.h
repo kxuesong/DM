@@ -10,4 +10,5 @@
 
 @interface InformationCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @end

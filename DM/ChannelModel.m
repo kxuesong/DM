@@ -6,8 +6,8 @@
 //  Copyright © 2015年 tepusoft. All rights reserved.
 //
 
-#import "DMLocalObject.h"
+#import "ChannelModel.h"
 
-@implementation DMLocalObject
+@implementation ChannelModel 
 
 @end

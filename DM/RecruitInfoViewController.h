@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FullInFormsViewController.h"
+@class ChannelModel;
 
-@interface RecruitInfoViewController : UIViewController
+@interface RecruitInfoViewController : FullInFormsViewController
+
+@property (nonatomic, strong) ChannelModel *chanelModel;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface columnModel : NSObject
+@interface ColumnModel : NSObject
 
 @property (nonatomic, strong) NSString *Id;
 @property (nonatomic, strong) NSString *name;

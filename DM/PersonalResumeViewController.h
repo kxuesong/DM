@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FullInFormsViewController.h"
 
-@interface PersonalResumeViewController : UIViewController
+@interface PersonalResumeViewController : FullInFormsViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *publicButton;
 
 @end

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIBarButtonItem *lefItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"导航返回"] style:UIBarButtonItemStylePlain target:self action:@selector(navigationBackItemClick)];
+    UIBarButtonItem *lefItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navigationBack"] style:UIBarButtonItemStylePlain target:self action:@selector(navigationBackItemClick)];
     
     self.navigationItem.leftBarButtonItem = lefItem;
 }

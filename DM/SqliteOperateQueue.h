@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SqliteOperateQueue : NSObject
++(dispatch_queue_t) shareManager;
 
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoustomNavigationBackViewController.h"
 
-@interface FullInFormsViewController : UIViewController
+@interface FullInFormsViewController : CoustomNavigationBackViewController
+
+@property (nonatomic, weak) id selectControl;
+@property (nonatomic, weak) NSLayoutConstraint *layoutContraint;
+
+
+
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InformationCollectionReusableView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

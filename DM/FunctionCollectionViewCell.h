@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FunctionCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

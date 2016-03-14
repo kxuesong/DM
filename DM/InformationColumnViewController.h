@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import"CoustomNavigationBackViewController.h"
 
-@interface InformationColumnViewController : UIViewController
+@interface InformationColumnViewController : CoustomNavigationBackViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
