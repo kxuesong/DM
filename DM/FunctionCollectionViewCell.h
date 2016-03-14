@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FunctionCollectionViewCell.h
 //  DM
 //
 //  Created by tepusoft on 15/12/21.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FunctionCollectionViewCell : UICollectionViewCell
 
 @end
-
